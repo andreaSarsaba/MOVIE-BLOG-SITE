@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Blog Site</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI' sans-serif;
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    #header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 30px 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+    }
+
+    #header .logo {
+        color: gold;
+        font-weight: 700;
+        font-size: 2cm;
+        text-decoration: none;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    head ul li {
+        list-style: none;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: ghostwhite;
+        border-radius: 2px;
+    }
+
+    header ul li a:hover {
+        background: linear-gradient(45deg, red, rgb(245, 14, 122));
+        color: #fff;
+    }
+
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .content {
+        position: absolute;
+        left: 2px;
+        top: 625px;
+    }
+
+    section .content .detail span {
+        position: relative;
+        top: -245px;
+        left: 108px;
+        color: ghostwhite;
+        margin: 12px;
+        font-weight: 400;
+    }
+
+    .detail span:last-child {
+        border: 1px solid rgb(182, 181, 181);
+        padding: 4px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 2px;
+        border-radius: 2px;
+        font-size: 12px;
+    }
+
+    .button span {
+        position: relative;
+        top: -205px;
+        left: 108px;
+        color: white;
+        margin: 10px;
+        font-weight: 500;
+    }
+
+    .button .btn1 {
+        background: red;
+        padding: 14px 26px;
+        border-radius: 2px;
+        transition: 0.5s;
+    }
+
+
+    .button .btn1:hover {
+        background-color: #fff;
+        color: red;
+        cursor: pointer;
+    }
+
+    .button .btn2 {
+        background: #ffffff2e;
+        padding: 14px 26px;
+        border-radius: 2px;
+        transition: 0.5s;
+    }
+
+    .button .btn2:hover {
+        background-color: #fff;
+        color: red;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    section::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 330px;
+        background: linear-gradient(to top, black, transparent);
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .sec {
+        position: relative;
+        top: 0;
+        height: 500px;
+        padding-left: 110px;
+        background-color: black;
+    }
+
+    .sec span {
+        position: relative;
+        margin-bottom: 10px;
+        color: #fff;
+        margin: 7px;
+    }
+
+    .sec .title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .sec .btn3 {
+        font-size: 12px;
+        text-decoration: underline;
+    }
+
+    .info {
+        position: absolute;
+        top: -130px;
+    }
+
+    .sec .row {
+        position: absolute;
+        top: -88px;
+        height: 200px;
+        width: 82%;
+    }
+
+    .sec .row .col {
+        width: 218px;
+        height: 148px;
+        border: 1px solid silver;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        margin-left: 72px;
+    }
+
+    .sec .row .col:first-child {
+        margin: 0px;
+        margin-left: 5px;
+    }
+
+    .sec .row .col img {
+        transition: 0.5s;
+    }
+
+    .sec .row .col img:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .sec .row2 {
+        position: absolute;
+        top: 88px;
+        height: 200px;
+        width: 82%;
+    }
+
+     .row2 .coll {
+        width: 810px;
+        float: left;
+        margin-right: 70px;
+        color: #fff;
+    }
+
+     .row2 .col2 {
+        overflow: hidden;
+    }
+
+     .row2 .col p {
+        color: #fff;
+        line-height: 24px;
+    }
+
+     .row2 .col h2 {
+        color: #fff;
+        margin-bottom: 18px;
+        font-size: 20px;
+    }
+
+     .row2 .col2 p {
+        text-decoration: underline;
+    }
+
+     .row3 {
+        position: absolute;
+        justify-content: center;
+        top: 288px;
+        height: 200px;
+        width: 82%;
+    }
+
+     .row3 h2 {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .row3 .col {
+        width: 240px;
+        display: flex;
+        float: left;
+        align-items: center;
+        height: 120px;
+        margin-right: 47px;
+    }
+
+    .row3 .c1 {
+        width: 100px;
+        float: left;
+        margin-right: 0px;
+        line-height: 20px;
+    }
+
+    .row3 .col:last-child {
+        margin: 0px;
+    }
+
+    .row3 .c1 h5 {
+        color: ghostwhite;
+    }
+
+    .row3 .c1 h6 {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <header id="header">
+        <ul>
+            <li><a href="index.html" class="active" style="height: 10px; width: 5px;">Home</a></li>
+            <li><a href="tvshow.html" class="active">Tv shows</a></li>
+            <li><a href="about.html" class="active">about us</b></a></li>
+            <li><a href="review.html" class="active"><b style="color: aqua;">previous reviewed</b></a></li>
+        </ul>
+        <a href="" class="logo">MOVIE BLOG SITE</a>
+    </header>
+
+        </div>
+    </div>
+    <div class="row3">
+        <h2>Movie reviewed</h2>
+        <div class="coll col">
+            <div class="1b c1">
+                <img src="profile.jpg" alt="" width="80px" height="80px" style="border-radius: 50%;">
+            </div>
+            <div class="rb c1">
+                <h5>albert einstein</h5>
+                <h6><strong style="color: gold;">Avatar:</strong>Lorem ipsum dolor sit amet consectetur <br></h6>
+            </div>
+        </div>
+        <div class="coll col">
+            <div class="1b c1">
+                <img src="profile.jpg" alt="" width="80px" height="80px" style="border-radius: 50%;">
+            </div>
+            <div class="rb c1">
+                <h5>lea lorenzana</h5>
+                <h6><strong style="color: gold;">Avatar:</strong>Lorem ipsum</h6>
+            </div>
+        </div>
+        <div class="coll col">
+            <div class="1b c1">
+                <img src="profile.jpg" alt="" width="80px" height="80px" style="border-radius: 50%;">
+            </div>
+            <div class="rb c1">
+                <h5>andrea sarsaba</h5>
+                <h6><strong style="color: gold;">Avatar:</strong> Lorem ipsum</h6>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

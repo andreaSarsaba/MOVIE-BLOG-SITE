@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Blog Site</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 30px 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+    }
+
+    #header .logo {
+        color: gold;
+        font-weight: 700;
+        font-size: 2cm;
+        text-decoration: none;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul li {
+        list-style: none;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: ghostwhite;
+        border-radius: 2px;
+    }
+
+    header ul li a:hover {
+        background: linear-gradient(45deg, red, rgb(245, 14, 122));
+        color: #fff;
+    }
+
+    section {
+        margin: 20px;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: #b6b4b4;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #0c0c0c;
+    }
+
+    p {
+        color: #0c0c0c;
+    }
+
+    .post-form {
+        margin-top: 2em;
+    }
+
+    .post-form label {
+        display: block;
+        margin-bottom: 0.5em;
+    }
+
+    .post-form textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+    .pindut {
+        padding: 4px;
+        width: 10%;
+        background-color: lightskyblue;
+    }
+    footer {
+            background-color:#db9834;
+            color: #fff;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    .row3 {
+        position: absolute;
+        top: 288px;
+        height: 200px;
+        width: 82%;
+    }
+
+    .row3 h2 {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .row3 .col {
+        width: 240px;
+        display: flex;
+        float: left;
+        align-items: end;
+        height: 120px;
+        margin-right: 47px;
+    }
+
+    .row3 .c1 {
+        width: 100px;
+        float: left;
+        margin-right: 0px;
+        line-height: 20px;
+    }
+
+    .row3 .col:last-child {
+        margin: 0px;
+    }
+
+    .row3 .c1 h5 {
+        color: ghostwhite;
+    }
+
+    .row3 .c1 h6 {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <header id="header">
+        <ul>
+            <li><a href="index.html" class="active" style="height: 10px; width: 5px;">Home</a></li>
+            <li><a href="tvshow.html" class="active"><b style="color: aqua;">Tv shows</b></a></li>
+            <li><a href="about.html" class="active">about us</a></li>
+            <li><a href="review.html" class="active">previous reviewed</a></li>
+        </ul>s
+        <a href="" class="logo">MOVIE BLOG SITE</a>
+    </header>
+    <section id="post" class="post-form">
+        <h2>Share you're idea or you're review for your movie that you watch</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter your name" id="name" name="name" required>
+            <label for="name">movie:</label>
+            <input type="text" placeholder="Name of the movie" id="name" name="name" required>
+
+            <label for="content">Movie you want to review:</label>
+            <textarea id="content" placeholder="Enter you're idea for the movie you've watched" name="content"
+                required></textarea>
+
+            <button class="pindut" type="submit"><strong>Sibmit</strong></button>
+        </form>
+    </section>
+    <footer>
+    <div class="row3">
+        <h2>Cast</h2>
+        <div class="coll col">
+            <div class="1b c1">
+                <img src="" alt="" width="80px" height="80px" style="border-radius: 50%;">
+            </div>
+            <div class="rb c1">
+                <h5>Albert Einstein</h5>
+                <h6>Review: Lorem ipsum</h6>
+            </div>
+        </div>
+        <div class="coll col">
+            <div class="1b c1">
+                <img src="" alt="" width="80px" height="80px" style="border-radius: 50%;">
+            </div>
+            <div class="rb c1">
+                <h5>Lea Lorenzana</h5>
+                <h6>Review: Lorem ipsum</h6>
+            </div>
+        </div>
+        <div class="coll col">
+            <div class="1b c1">
+                <img src="" alt="" width="80px" height="80px" style="border-radius: 50%;">
+            </div>
+            <div class="rb c1">
+                <h5>Andrea Sarsaba</h5>
+                <h6>Review: Lorem ipsum</h6>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
